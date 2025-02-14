@@ -30,11 +30,6 @@ a {
     text-decoration: none;
 }
 
-.section-title {
-    margin: 0;
-    font-size: 22px;
-}
-
 .card {
     background-color: white;
     border-radius: 20px;
@@ -58,6 +53,187 @@ a {
     color: var(--main-bg-color)
 }
 
+
+/*Mise en page générale header desktop*/
+.header {
+   display: flex;
+   align-items: center; 
+   justify-content: space-between; 
+   padding-bottom: 20px;  
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 60px;  
+}
+
+/*Mise en page de la bordure bleue en survol au desus des liens*/
+.lien-menu:hover {
+    color: #0065FC;
+    border-top: 2px solid blue;
+}
+.lien-menu {
+    border-top: 2px solid transparent; 
+    padding-top: 15px;   
+}
+
+/*Mise en page du container1 (liens de navigation) dans le header*/
+.container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /*Suppression de l'espace entre les liens du header et la bordure de la page*/
+    margin-top: 0; 
+    gap: 30%;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+/*Mise en page de la section1 (H1 et 1er Paragraphe)*/
+.section1 {
+    padding-bottom: 1%;
+}
+
+/*Mise en page du formulaire de recherche*/
+.formulaire-recherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 50px;       
+}
+
+/*Mise en page du conteneur du formulaire*/
+.recherche-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1%;
+    
+     
+}
+
+/*Icone du formulaire*/
+.icone1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+    width: 40px;
+    background-color: rgb(223, 221, 221);
+}
+
+/*coloration de l'icone du formulaire*/
+.fa-location-dot {
+    color: black;
+}
+
+/*le champ de saisi*/
+.saisi {
+    text-align: center;
+    font-weight: 700;
+    border-top: 0.1px solid rgb(223, 221, 221);;
+    border-bottom: 0.1px solid rgb(223, 221, 221);;
+    border-left: 0;
+    border-right: 0;
+     
+}
+
+/*le bouton rechercher*/
+.bouton-recherche {
+    background-color: #0065FC;
+    color: white;
+    font-weight: 700;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; 
+    border: transparent;  
+}
+
+/* Affiche le texte par défaut */
+.bouton-recherche .button-text {
+    display: inline;  
+}
+
+/* Cache l'icône par défaut */
+.bouton-recherche .icone-recherche {
+    display: none;  
+  }
+  
+/*Mise en page des filtres*/
+.filtres {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.text-filtres {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    
+}
+
+/*Les liens à l'intérieur des filtres*/
+.liens-filtres {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*Centre les éléments horizontales dans leur cellule.*/
+    justify-items: center;
+    /*Centre les éléments verticales dans leur cellule.*/
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-weight: 700;
+} 
+
+/*mise en page du lien cliquable économique*/
+.lienfiltre {
+    border: solid;
+    border-color: rgb(208, 208, 208);
+    border-width: 1px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 7px;
+}
+
+/*coloration des filtres au passage de la souris*/
+.lienfiltre:hover {
+    background-color: rgb(163, 199, 200);
+}
+
+/*Mise en page de "paragraphe-infos"*/
+.paragraphe-infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 1%;
+}
+
+/*Mise en page de l'icône du paraphe infos*/
+.paragraphe-infos .fa-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 12px;
+    padding: 4px;
+    width: 11px;
+    height: 11px;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -74,6 +250,69 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+/*titre h2 hebergement*/
+.hebergements-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 1%;
+    margin-left: 1%;
+}
+
+/*Structuration des cartes hébergement entrois colonnes de largeur égale*/
+.hebergements-cards {
+    display: grid;
+
+    /* 3 colonnes de même largeur */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Centre les éléments verticalement*/ 
+    align-items: center;
+
+    /*Espacement entre les cartes*/  
+    gap: 3%; 
+    padding: 1%;
+    
+}
+
+/*bordures et alignement des carte hebergement*/
+.hebergements-cards .card {
+    text-align: center;
+}
+
+/*Mise en page des images des cartes hébergement*/
+.hebergements-cards img {
+    width: 100%;
+    height: 136px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/*Mise en page du contenu en dessous des cartes hébergement*/
+.hebergements-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    padding-left: 3%;
+}
+
+/*Titre h3 le nom des cartes hebergement*/
+.hebergements-cards .card-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*sous-titre des cartes hebergement*/
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
 }
 
 /****** Populaires ***********/
@@ -121,6 +360,63 @@ a {
     margin-bottom: 5px;
 }
 
+/*Mise en page du titre h2 "Activités à Marseilles"*/
+.activites-title {
+    margin-left: 2%;
+    margin-top: 3%;
+}
+/*Mise en page de la section activités*/
+.activites {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+/*images de cartes activités à Marseilles*/
+.activites-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/*titres h3 des cartes activités*/
+.activites-card .card-title {
+    margin-left: 4%;
+}
+
+/*mise en page des cartes activités*/
+.activites .activites-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    gap: 10px;
+    box-shadow: 0.2px 5px 4px rgb(222, 221, 221);
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/*le pied de page*/
+footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+    gap: 20%;
+    padding-top: 25px;
+    padding-left: 25px;
+    background-color: rgb(237, 232, 232);
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 40px;
+    padding-top: 20px;
+}
 
 
 
@@ -129,12 +425,174 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    /*Mise en page générale header tablette*/
+    .header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 60px;  
+    }
+
+    /*Mise en page de la bordure bleue en survol au desuus des liens*/
+    .lien-menu:hover {
+        border-top: 2px solid blue;
+        color: blue; 
+    }
+    .lien-menu {
+        border-top: 2px solid transparent;
+        padding-top: 1%;
+        margin-left: 30px;
+    }
+
+    /*Mise en page du container1 dans le header*/
+    .container1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 5%;
+        /*Suppression de l'espace les liens du header et la bordure de la page*/
+        margin-top: 0; 
+        margin-right: 0.5%;
+    }
+
+    .filtres {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2%;
+    }
+
+    .text-filtres {
+        display: grid;
+        /* Le titre occupe les 4 colonnes */
+        grid-column-start: 1;
+        grid-column-end: 5; 
+        text-align: start;
+        font-weight: 700;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-left: 2%;
+    }
+    
+    /*Les liens à l'intérieur des filtres*/
+    .liens-filtres {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        /*Centre les éléments horizontales dans leur cellule.*/
+        justify-items: center;
+        /*Centre les éléments verticales dans leur cellule.*/
+        align-items: center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        gap: 10px;
+        font-weight: 700;
+    }
+
+    /*coloration au passage de la souris*/
+    .lienfiltre:hover {
+        background-color: rgb(163, 199, 200);
+    }
+
+    /*Mise en page de "paragraphe-infos"*/
+    .paragraphe-infos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 2%;
+    }
+
+    /*Mise en page de l'icône du paraphe infos*/
+    .paragraphe-infos .fa-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid grey;
+        border-radius: 13px;
+        padding: 5px;
+        width: 10px;
+        height: 10px;
+    }
+
+    
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
-
+    /*Hebergements*/
     .hebergements {
         width: 100%;
+    }
+
+    /*titre h2 hebergement*/
+    .hebergements-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-bottom: 1%;
+        margin-left: 1%;
+    }
+
+    /*Structuration des cartes hébergement entrois colonnes de largeur égale*/
+    .hebergements-cards {
+        display: grid;
+
+        /* 3 colonnes de même largeur */
+        grid-template-columns: repeat(3, 1fr);
+
+        /* Centre les éléments verticalement*/ 
+        align-items: center;
+
+        /*Espacement entre les cartes*/  
+        gap: 3%; 
+        padding: 1%;   
+    }
+
+    /*bordures et alignement des carte hebergement*/
+    .hebergements-cards .card {
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    /*Mise en page des images des cartes hébergement*/
+    .hebergements-cards img {
+        width: 100%;
+        height: 110px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    /*Mise en page du contenu en dessous des cartes hébergement*/
+    .hebergements-cards .card-content {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        text-align: left;
+        width: 100%;
+        padding-left: 3%;
+    }
+
+    /*Titre h3 le nom des cartes hebergement*/
+    .hebergements-cards .card-title {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    /*sous-titre des cartes hebergement*/
+    .hebergements-cards .card-subtitle {
+        margin: 0;
+    }
+
+    .hebergements-cards .card-rating {
+        margin-bottom: 5px;
     }
 
     .populaires {
@@ -149,7 +607,7 @@ a {
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 32%;
     }
 
     .populaires-cards .card-title {
@@ -159,9 +617,442 @@ a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    /*Mise en page du titre h2 "Activités à Marseilles"*/
+    .activites-title {
+        margin-left: 2%;
+        margin-top: 3%;
+    }
+    /*Mise en page de la section activités*/
+    .activites {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        padding-bottom: 1%;
+    }
+
+    /*images de cartes activités à Marseilles*/
+    .activites-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    /*titres h3 des cartes activités*/
+    .activites-card .card-title {
+        margin-left: 4%;
+    }
+
+    /*mise en page des cartes activités*/
+    .activites .activites-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        gap: 10px;
+        box-shadow: 0.2px 5px 4px rgb(222, 221, 221);
+        background-color: white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    /*le pied de page*/
+    footer {
+        display: flex;
+        flex-flow: row;
+        justify-content: start;
+        gap: 10%;
+        padding-top: 25px;
+        padding-left: 25px;
+        background-color: rgb(237, 232, 232);
+        margin-left: 15px;
+        margin-right: 10px;
+        margin-top: 40px;
+        padding-top: 20px;
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+
+    /*Mise en page du fond de coloration de hebergemenet et du reste de la page en responsive*/
+    :root .hebergements{
+        --main-bg-color: white;
+        --filter-bg-color: #DEEBFF;
+    }
+    
+    body {
+        margin: 0;
+    }
+
+    .main-container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+    }
+    /*Structuration des cartes hébergement en une colonne de la même largeur*/
+    .header {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    /*Mise en page du logo sur téléphone mobile*/
+    #logo {
+        width: 60px;
+        padding: 20px; 
+        margin-left: auto;
+        margin-right: auto;     
+    }
+
+     /*Mise en page du container dans le header*/
+     .container1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 30%;
+        padding: 1%;
+        padding-right: 10%;
+    }
+
+    /*Mise en page de la bordure bleue en survol au desus des liens*/
+    .lien-menu:hover {
+        color: #0065FC;
+        border-bottom: 2px solid blue;
+        border-top: 0;
+    }
+    .lien-menu {
+        border-bottom: 2px solid transparent; 
+        padding-bottom: 10px   
+    }
+
+    /*Mise en page de la section1 (h1 et  paragraphe1)écran-mobile*/
+    .section1 {
+        margin: 15px;
+    }
+
+    .section1 .title1 {
+        font-size: 22px;
+        margin-bottom: 0;  
+    }
+
+    .section1 section1-paragraphe {
+        font-size: 15px;
+    }
+
+    /*Mise en page du formulaire de recherche*/
+    .formulaire-recherche {
+        height: 50px; 
+        min-width: 100%;
+        margin-left: 15px;
+        margin-bottom: 20px;       
+    }
+
+    /*Mise en page du conteneur du formulaire*/
+    .recherche-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /*Icone du formulaire*/
+    .icone1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        height: 100%;
+        width: 52px;
+        background-color: rgb(223, 221, 221);
+    }
+
+    /*coloration de l'icone du formulaire*/
+    .fa-location-dot {
+        color: black;
+    }
+
+    /*le champ de saisi*/
+    .saisi {
+        text-align: center;
+        font-weight: 700;
+        border-top: 1px solid rgb(244, 240, 240);;
+        border-bottom: 1px solid rgb(244, 240, 240);;
+        border-left: 0;
+        border-right: 0;
+        width: 100%;   
+    }
+
+    /*le bouton rechercher*/
+    .bouton-recherche {
+        background-color: #0065FC;
+        font-weight: 700;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px; 
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 52px;
+        box-shadow: 0 3px 1px 0 rgb(215, 213, 213); 
+        border: transparent; 
+    }
+
+    /* cache le texte par défaut */
+    .bouton-recherche .button-text {
+        display: none;  
+    }
+
+    /* Affiche l'icône par défaut */
+    .bouton-recherche .icone-recherche {
+        display: inline;  
+    }
+
+    /*Mise en page de l'icône recherche*/
+    .icone-recherche {
+        height: 100%;
+        width: 52px;
+    }
+
+    /*coloration icône recherche*/
+    .fa-magnifying-glass {
+        color: white;
+    }
+
+    /*Mise en page des filtres*/
+    .filtres {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        margin: 10px;
+    }
+    /*texte filtres*/
+    .text-filtres {
+        display: flex;
+        align-items:start;
+        font-weight: 700;    
+    }
+
+    /*Les liens à l'intérieur des filtres*/
+    .liens-filtres {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /*Centre les éléments horizontales dans leur cellule.*/
+        justify-items: center;
+        /*Centre les éléments verticales dans leur cellule.*/
+        align-items: center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        gap: 20px;
+        font-weight: 700;
+        padding-bottom: 10px;
+    } 
+
+    /*mise en page du lien cliquable économique*/
+    .lienfiltre {
+        display: flex;
+        width: 90%;
+        height: 70%;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        border: solid;
+        border-color: rgb(208, 208, 208);
+        border-width: 1px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding: 7px;
+    }
+
+    /*lien-nos-pepites passe en blanc pas de coloration au passage de la souris*/
+    .lienfiltre:hover {
+        background-color: rgb(163, 199, 200);
+    }
+
+    /*Mise en page de "paragraphe-infos"*/
+    .paragraphe-infos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        padding-bottom: 2%;
+        margin-left: 15px;
+        margin-right: 10px;
+    }
+
+    /*Mise en page de l'icône du paraphe infos*/
+    .paragraphe-infos .fa-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid grey;
+        border-radius: 13px;
+        padding: 5px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /*Mise en page de la section "populaires sur téléphone*/
+    .populaires { 
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        box-sizing: border-box;   
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    /*Structuration des cartes hébergement en une colonne de largeur égale*/
+    .hebergements { 
+        box-sizing: border-box;
+        padding-bottom: 1%; 
+        border-top: solid transparent; 
+    }
+
+    .hebergements-cards {
+        display: grid;
+        /* 1 colonne de même largeur */
+        grid-template-columns: 1fr;
+
+        /* Centre les éléments verticalement*/ 
+        align-items: center;
+
+        /*Espacement entre les cartes*/  
+        gap: 20px; 
+        padding-bottom: 15%;
+    }
+
+    /*bordures et alignement des carte hebergement*/
+    .hebergements-cards .card {
+        text-align: center;
+        border: solid transparent;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px
+    }
+
+    /*Mise en page des images des cartes hébergement*/
+    .hebergements-cards img {
+        width: 100%;
+        height: 130px;
+    }
+
+    /*Mise en page du contenu en dessous des cartes hébergement*/
+    .hebergements-cards .card-content {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        text-align: left;
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    /*Titre h3 le nom des cartes hebergement*/
+    .hebergements-cards .card-title {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    /*sous-titre des cartes hebergement*/
+    .hebergements-cards .card-subtitle {
+        margin: 0;
+    }
+
+    .hebergements-cards .card-rating {
+        margin-bottom: 5px;
+    }
+
+    /*Mise en page du titre h2 "Activités à Marseilles"*/
+    .activites-title {
+        padding-top: 5%;
+        padding-bottom: 10%; 
+    }
+
+    /*Mise en page de la section activités*/
+    .activites {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        padding-bottom: 3%;
+        gap: 2%;
+    }
+
+    /*images de cartes activités à Marseilles*/
+    .activites-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      
+    }
+
+    /*titres h3 des cartes activités*/
+    .activites-card .card-title {
+        margin-left: 4%;
+    }
+
+    /*mise en page des cartes activités*/
+    .activites .activites-card {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        box-shadow: 0.2px 5px 4px rgb(222, 221, 221);
+        background-color: white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    /*le pied de page*/
+    footer {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding-top: 1%;
+        padding-left: 25px;
+        background-color: rgb(237, 232, 232);
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 25%;
+        padding-top: 5%;
+    }
+
+    
 }
