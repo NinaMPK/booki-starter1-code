@@ -56,17 +56,17 @@ a {
 
 /*Mise en page générale header desktop*/
 .header {
-   display: flex;
-   align-items: center; 
-   justify-content: space-between; 
-   padding-bottom: 20px;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 #logo {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 60px;  
+    width: 60px;
 }
 
 /*Mise en page de la bordure bleue en survol au desus des liens*/
@@ -74,9 +74,10 @@ a {
     color: #0065FC;
     border-top: 2px solid blue;
 }
+
 .lien-menu {
-    border-top: 2px solid transparent; 
-    padding-top: 15px;   
+    border-top: 2px solid transparent;
+    padding-top: 15px;
 }
 
 /*Mise en page du container1 (liens de navigation) dans le header*/
@@ -85,7 +86,7 @@ a {
     flex-direction: row;
     justify-content: flex-end;
     /*Suppression de l'espace entre les liens du header et la bordure de la page*/
-    margin-top: 0; 
+    margin-top: 0;
     gap: 30%;
 }
 
@@ -104,7 +105,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 50px;       
+    height: 50px;
 }
 
 /*Mise en page du conteneur du formulaire*/
@@ -112,8 +113,8 @@ a {
     display: flex;
     flex-direction: row;
     padding-bottom: 1%;
-    
-     
+
+
 }
 
 /*Icone du formulaire*/
@@ -137,11 +138,13 @@ a {
 .saisi {
     text-align: center;
     font-weight: 700;
-    border-top: 0.1px solid rgb(223, 221, 221);;
-    border-bottom: 0.1px solid rgb(223, 221, 221);;
+    border-top: 0.1px solid rgb(223, 221, 221);
+    ;
+    border-bottom: 0.1px solid rgb(223, 221, 221);
+    ;
     border-left: 0;
     border-right: 0;
-     
+
 }
 
 /*le bouton rechercher*/
@@ -150,20 +153,20 @@ a {
     color: white;
     font-weight: 700;
     border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px; 
-    border: transparent;  
+    border-bottom-right-radius: 10px;
+    border: transparent;
 }
 
 /* Affiche le texte par défaut */
 .bouton-recherche .button-text {
-    display: inline;  
+    display: inline;
 }
 
 /* Cache l'icône par défaut */
 .bouton-recherche .icone-recherche {
-    display: none;  
-  }
-  
+    display: none;
+}
+
 /*Mise en page des filtres*/
 .filtres {
     display: flex;
@@ -178,7 +181,7 @@ a {
     display: flex;
     align-items: center;
     font-weight: 700;
-    
+
 }
 
 /*Les liens à l'intérieur des filtres*/
@@ -194,7 +197,7 @@ a {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     font-weight: 700;
-} 
+}
 
 /*mise en page du lien cliquable économique*/
 .lienfiltre {
@@ -268,13 +271,13 @@ a {
     /* 3 colonnes de même largeur */
     grid-template-columns: repeat(3, 1fr);
 
-    /* Centre les éléments verticalement*/ 
+    /* Centre les éléments verticalement*/
     align-items: center;
 
-    /*Espacement entre les cartes*/  
-    gap: 3%; 
+    /*Espacement entre les cartes*/
+    gap: 3%;
     padding: 1%;
-    
+
 }
 
 /*bordures et alignement des carte hebergement*/
@@ -365,6 +368,7 @@ a {
     margin-left: 2%;
     margin-top: 3%;
 }
+
 /*Mise en page de la section activités*/
 .activites {
     display: grid;
@@ -408,7 +412,7 @@ footer {
     display: flex;
     flex-flow: row;
     justify-content: start;
-    gap: 20%;
+    gap: 15%;
     padding-top: 25px;
     padding-left: 25px;
     background-color: rgb(237, 232, 232);
@@ -418,6 +422,17 @@ footer {
     padding-top: 20px;
 }
 
+/* Supprime les puces et la numérotation */
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*Met des marges entre les éléments des différentes rubriques*/
+footer li {
+    margin: 10px;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -436,14 +451,15 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        width: 60px;  
+        width: 60px;
     }
 
     /*Mise en page de la bordure bleue en survol au desuus des liens*/
     .lien-menu:hover {
         border-top: 2px solid blue;
-        color: blue; 
+        color: blue;
     }
+
     .lien-menu {
         border-top: 2px solid transparent;
         padding-top: 1%;
@@ -457,7 +473,7 @@ footer {
         justify-content: flex-end;
         gap: 5%;
         /*Suppression de l'espace les liens du header et la bordure de la page*/
-        margin-top: 0; 
+        margin-top: 0;
         margin-right: 0.5%;
     }
 
@@ -471,14 +487,14 @@ footer {
         display: grid;
         /* Le titre occupe les 4 colonnes */
         grid-column-start: 1;
-        grid-column-end: 5; 
+        grid-column-end: 5;
         text-align: start;
         font-weight: 700;
         padding-top: 1%;
         padding-bottom: 1%;
         padding-left: 2%;
     }
-    
+
     /*Les liens à l'intérieur des filtres*/
     .liens-filtres {
         display: flex;
@@ -522,11 +538,12 @@ footer {
         height: 10px;
     }
 
-    
+
 
     .hebergements-and-populaires {
         flex-direction: column;
     }
+
     /*Hebergements*/
     .hebergements {
         width: 100%;
@@ -548,12 +565,12 @@ footer {
         /* 3 colonnes de même largeur */
         grid-template-columns: repeat(3, 1fr);
 
-        /* Centre les éléments verticalement*/ 
+        /* Centre les éléments verticalement*/
         align-items: center;
 
-        /*Espacement entre les cartes*/  
-        gap: 3%; 
-        padding: 1%;   
+        /*Espacement entre les cartes*/
+        gap: 3%;
+        padding: 1%;
     }
 
     /*bordures et alignement des carte hebergement*/
@@ -623,6 +640,7 @@ footer {
         margin-left: 2%;
         margin-top: 3%;
     }
+
     /*Mise en page de la section activités*/
     .activites {
         display: grid;
@@ -666,7 +684,7 @@ footer {
         display: flex;
         flex-flow: row;
         justify-content: start;
-        gap: 10%;
+        gap: 15%;
         padding-top: 25px;
         padding-left: 25px;
         background-color: rgb(237, 232, 232);
@@ -676,17 +694,27 @@ footer {
         padding-top: 20px;
     }
 
+    /* Supprime les puces et la numérotation */
+    footer ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    /*Met des marges entre les éléments des différentes rubriques*/
+    footer li {
+        margin: 10px;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
 
     /*Mise en page du fond de coloration de hebergemenet et du reste de la page en responsive*/
-    :root .hebergements{
+    :root .hebergements {
         --main-bg-color: white;
         --filter-bg-color: #DEEBFF;
     }
-    
+
     body {
         margin: 0;
     }
@@ -696,6 +724,7 @@ footer {
         box-sizing: border-box;
         padding: 0;
     }
+
     /*Structuration des cartes hébergement en une colonne de la même largeur*/
     .header {
         display: flex;
@@ -710,13 +739,13 @@ footer {
     /*Mise en page du logo sur téléphone mobile*/
     #logo {
         width: 60px;
-        padding: 20px; 
+        padding: 20px;
         margin-left: auto;
-        margin-right: auto;     
+        margin-right: auto;
     }
 
-     /*Mise en page du container dans le header*/
-     .container1 {
+    /*Mise en page du container dans le header*/
+    .container1 {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -731,9 +760,10 @@ footer {
         border-bottom: 2px solid blue;
         border-top: 0;
     }
+
     .lien-menu {
-        border-bottom: 2px solid transparent; 
-        padding-bottom: 10px   
+        border-bottom: 2px solid transparent;
+        padding-bottom: 10px
     }
 
     /*Mise en page de la section1 (h1 et  paragraphe1)écran-mobile*/
@@ -743,7 +773,7 @@ footer {
 
     .section1 .title1 {
         font-size: 22px;
-        margin-bottom: 0;  
+        margin-bottom: 0;
     }
 
     .section1 section1-paragraphe {
@@ -752,10 +782,10 @@ footer {
 
     /*Mise en page du formulaire de recherche*/
     .formulaire-recherche {
-        height: 50px; 
+        height: 50px;
         min-width: 100%;
         margin-left: 15px;
-        margin-bottom: 20px;       
+        margin-bottom: 20px;
     }
 
     /*Mise en page du conteneur du formulaire*/
@@ -785,11 +815,13 @@ footer {
     .saisi {
         text-align: center;
         font-weight: 700;
-        border-top: 1px solid rgb(244, 240, 240);;
-        border-bottom: 1px solid rgb(244, 240, 240);;
+        border-top: 1px solid rgb(244, 240, 240);
+        ;
+        border-bottom: 1px solid rgb(244, 240, 240);
+        ;
         border-left: 0;
         border-right: 0;
-        width: 100%;   
+        width: 100%;
     }
 
     /*le bouton rechercher*/
@@ -797,22 +829,22 @@ footer {
         background-color: #0065FC;
         font-weight: 700;
         border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px; 
+        border-bottom-right-radius: 10px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         width: 52px;
-        box-shadow: 0 3px 1px 0 rgb(215, 213, 213); 
-        border: transparent; 
+        box-shadow: 0 3px 1px 0 rgb(215, 213, 213);
+        border: transparent;
     }
 
     /* cache le texte par défaut */
     .bouton-recherche .button-text {
-        display: none;  
+        display: none;
     }
 
     /* Affiche l'icône par défaut */
     .bouton-recherche .icone-recherche {
-        display: inline;  
+        display: inline;
     }
 
     /*Mise en page de l'icône recherche*/
@@ -836,11 +868,12 @@ footer {
         padding-bottom: 1%;
         margin: 10px;
     }
+
     /*texte filtres*/
     .text-filtres {
         display: flex;
-        align-items:start;
-        font-weight: 700;    
+        align-items: start;
+        font-weight: 700;
     }
 
     /*Les liens à l'intérieur des filtres*/
@@ -858,7 +891,7 @@ footer {
         gap: 20px;
         font-weight: 700;
         padding-bottom: 10px;
-    } 
+    }
 
     /*mise en page du lien cliquable économique*/
     .lienfiltre {
@@ -912,11 +945,11 @@ footer {
     }
 
     /*Mise en page de la section "populaires sur téléphone*/
-    .populaires { 
+    .populaires {
         width: 100%;
         margin-top: 50px;
         margin-bottom: 10px;
-        box-sizing: border-box;   
+        box-sizing: border-box;
     }
 
     .populaires-cards {
@@ -938,10 +971,10 @@ footer {
     }
 
     /*Structuration des cartes hébergement en une colonne de largeur égale*/
-    .hebergements { 
+    .hebergements {
         box-sizing: border-box;
-        padding-bottom: 1%; 
-        border-top: solid transparent; 
+        padding-bottom: 1%;
+        border-top: solid transparent;
     }
 
     .hebergements-cards {
@@ -949,11 +982,11 @@ footer {
         /* 1 colonne de même largeur */
         grid-template-columns: 1fr;
 
-        /* Centre les éléments verticalement*/ 
+        /* Centre les éléments verticalement*/
         align-items: center;
 
-        /*Espacement entre les cartes*/  
-        gap: 20px; 
+        /*Espacement entre les cartes*/
+        gap: 20px;
         padding-bottom: 15%;
     }
 
@@ -999,7 +1032,7 @@ footer {
     /*Mise en page du titre h2 "Activités à Marseilles"*/
     .activites-title {
         padding-top: 5%;
-        padding-bottom: 10%; 
+        padding-bottom: 10%;
     }
 
     /*Mise en page de la section activités*/
@@ -1019,7 +1052,7 @@ footer {
         object-fit: cover;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-      
+
     }
 
     /*titres h3 des cartes activités*/
@@ -1054,5 +1087,16 @@ footer {
         padding-top: 5%;
     }
 
-    
+    /* Supprime les puces et la numérotation */
+    footer ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    /*Met des marges entre les éléments des différentes rubriques*/
+    footer li {
+        margin: 10px;
+    }
+
+
 }
