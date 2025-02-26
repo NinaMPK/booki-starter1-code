@@ -213,7 +213,7 @@ a {
 
 /*coloration des filtres au passage de la souris*/
 .lienfiltre:hover {
-    background-color: rgb(163, 199, 200);
+    background-color: var(--filter-bg-color);
 }
 
 /*Mise en page de "paragraphe-infos"*/
